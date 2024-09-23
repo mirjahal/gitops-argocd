@@ -11,9 +11,9 @@ spec:
     path: day-2/app-of-apps
     helm:
       parameters:
-      - name: argocd.giropos-senhas.enabled
+      - name: argocd.giropopsSenhas.enabled
         value: "true"
-      - name: argocd.random-logger.enabled
+      - name: argocd.randomLogger.enabled
         value: "true"
   destination:
     namespace: argocd
