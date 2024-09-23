@@ -1,3 +1,4 @@
+{{- if .Values.argocd.randomLogger.enabled -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -16,4 +17,5 @@ spec:
     automated:
       selfHeal: true
     syncOptions:
-    - CreateNamespace=true 
+    - CreateNamespace=true
+{{- end -}}
