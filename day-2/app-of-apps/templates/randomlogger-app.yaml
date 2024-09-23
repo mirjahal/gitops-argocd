@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: random-logger
+  namespace: argocd
+spec:
+  destination:
+    namespace: random-logger
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: day-2/random-logger/helm
+    repoURL: https://github.com/mirjahal/gitops-argocd.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true 
