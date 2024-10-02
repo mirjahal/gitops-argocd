@@ -13,8 +13,10 @@ spec:
       parameters:
       - name: argocd.giropopsSenhas.enabled
         value: "true"
+      - name: argocd.giropopsSenhas.replicas
+        value: "5"
       - name: argocd.randomLogger.enabled
-        value: "true"
+        value: "false"
   destination:
     namespace: argocd
     server: 'https://kubernetes.default.svc'
