@@ -11,7 +11,7 @@ spec:
     targetRevision: 7.0.19
     helm:
       valueFiles:
-      - $values/grafana/values.yaml
+      - $values/day-2/grafana/values.yaml
   - repoURL: 'https://github.com/mirjahal/gitops-argocd.git'
     targetRevision: main
     ref: values
