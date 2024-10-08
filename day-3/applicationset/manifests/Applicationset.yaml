@@ -11,7 +11,7 @@ spec:
       repoURL: https://github.com/mirjahal/gitops-argocd.git
       revision: main
       directories:
-      - path: day3/applicationset/apps/*/helm
+      - path: day-3/applicationset/apps/*/helm
   template:
     metadata:
       name: '{{index .path.segments 3}}'
